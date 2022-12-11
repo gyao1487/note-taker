@@ -108,13 +108,13 @@ const handleNewNoteView = (e) => {
   renderActiveNote();
 };
 
-const handleRenderSaveBtn = () => {
-  if (!noteTitle.value.trim() || !noteText.value.trim()) {
-    hide(saveNoteBtn);
-  } else {
-    show(saveNoteBtn);
-  }
-};
+// const handleRenderSaveBtn = () => {
+//   if (!noteTitle.value.trim() || !noteText.value.trim()) {
+//     hide(saveNoteBtn);
+//   } else {
+//     show(saveNoteBtn);
+//   }
+// };
 
 // Render the list of note titles
 const renderNoteList = async (notes) => {
@@ -176,8 +176,8 @@ const getAndRenderNotes = () => getNotes().then(renderNoteList);
 if (window.location.pathname === '/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave);
   newNoteBtn.addEventListener('click', handleNewNoteView);
-  noteTitle.addEventListener('keyup', handleRenderSaveBtn);
-  noteText.addEventListener('keyup', handleRenderSaveBtn);
+  // noteTitle.addEventListener('keyup', handleRenderSaveBtn);
+  // noteText.addEventListener('keyup', handleRenderSaveBtn);
 }
 
 getAndRenderNotes();

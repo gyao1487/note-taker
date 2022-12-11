@@ -28,7 +28,7 @@ notes.get('/:note_id', (req,res) => {
 notes.post('/',(req,res) => {
   console.log(req.body);
 
-  const { title, text } = note.body;
+  const { title, text } = notes.body;
 
   if (req.body) {
     const newNote = {

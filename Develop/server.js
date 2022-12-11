@@ -3,7 +3,7 @@ const path = require('path');
 const { clog } = require('./middleware/clog');
 const api = require('./routes/index.js');
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 1487;
 
 const app = express();
 
@@ -22,9 +22,14 @@ app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
+// GET Route for notes page
+app.get('/notes', (req,res) =>
+  res.sendFile(path.join(__dirname, '/public/notes.html'))
+);
+
 // Wildcard route to direct users to a 404 page
 app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, 'public/404.html'))
+  res.sendFile(path.join(__dirname, '/public/404.html'))
 );
 
 //PORT where app is hosted
@@ -32,7 +37,3 @@ app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
 
-// Wildcard route to direct users to a 404 page
-app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, 'public/404.html'))
-);

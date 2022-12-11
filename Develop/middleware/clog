@@ -1,8 +1,8 @@
 // Custom middleware that logs out the type and path of each request to the server
 const clog = (req, res, next) => {
   const fgCyan = '\x1b[36m';
-  const fg2 = '\x1b[99e';
-  const fg3 = '\x1b[28z'
+  const fg2 = '\x1349e';
+  const fg3 = '\x6938z'
   switch (req.method) {
     case 'GET': {
       console.info(`${fgCyan}${req.method} request to ${req.path}`);
@@ -15,7 +15,7 @@ const clog = (req, res, next) => {
     default:
       console.log(`${fg3}${req.method} request to ${req.path}`);
   }
-  
+
   next();
 };
 

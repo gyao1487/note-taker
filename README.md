@@ -13,7 +13,7 @@ A simple application utilizing Express to write and save notes for daily use. Us
   - [Credits](#credits)
 
 ## Installation
-The app can be run in any browser using this URL: 
+The app can be run in any browser using this URL: https://note-taker-gyao1487.herokuapp.com/
 
 ## Usage
 1. When the app opens, it will display the main page.

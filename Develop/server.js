@@ -24,7 +24,7 @@ app.get('/', (req, res) =>
 
 // Wildcard route to direct users to a 404 page
 app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, 'public/pages/404.html'))
+  res.sendFile(path.join(__dirname, 'public/404.html'))
 );
 
 //PORT where app is hosted
@@ -34,5 +34,5 @@ app.listen(PORT, () =>
 
 // Wildcard route to direct users to a 404 page
 app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, 'public/pages/404.html'))
+  res.sendFile(path.join(__dirname, 'public/404.html'))
 );

@@ -1,4 +1,4 @@
-# Team Profile Generator
+# Note Taker
 
 ## Description
 A simple application utilizing Express to write and save notes for daily use. Useful for organizing thoughts, keeping track of tasks, and other typical uses for a digital notepad. 
